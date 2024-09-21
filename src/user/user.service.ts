@@ -5,11 +5,12 @@ import { Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity';
+import { UserRepositoryProvider } from './user.repository';
 
 @Injectable()
 export class UserService {
   constructor(
-    @Inject('USER_REPOSITORY')
+    @Inject(UserRepositoryProvider)
     private readonly userRepository: Repository<User>,
   ) {}
   async create(dto: CreateUserDto) {
