@@ -9,6 +9,13 @@
       "recommended": true,
       "style": {
         "useImportType": "off"
+      },
+      "correctness": {
+        "noUnusedImports": "error"
+      },
+      "suspicious": {
+        "noSuspiciousSemicolonInJsx": "error",
+        "noImportAssign": "error"
       }
     }
   },
